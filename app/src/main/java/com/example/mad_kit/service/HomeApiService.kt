@@ -9,7 +9,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Header
 
-private const val BASE_URL = "http://localhost:8000/ "
+private const val BASE_URL = "http://10.90.137.154:8000/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
@@ -21,7 +21,7 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface HomeApiService {
-    @GET("api/kit/kit-people")
+    @GET("api/kit/kit-people/")
     fun getContacts(@Header("Authorization") authHeader: String): Call<List<Person>>
 }
 

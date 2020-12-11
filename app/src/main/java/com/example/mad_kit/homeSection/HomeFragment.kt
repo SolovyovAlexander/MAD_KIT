@@ -1,6 +1,7 @@
 package com.example.mad_kit.homeSection
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,7 +36,8 @@ class HomeFragment : Fragment() {
             ?.addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     val idToken = task.result!!.token
-//                    uploadContacts(idToken)
+                    Log.println(Log.ERROR,"kek", "LOOOOOOOL")
+                    uploadContacts(idToken)
                 }
             }
     }
@@ -61,7 +63,7 @@ class HomeFragment : Fragment() {
             ?.addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     val idToken = task.result!!.token
-//                    uploadContacts(idToken)
+                    uploadContacts(idToken)
                 }
             }
     }
@@ -73,12 +75,19 @@ class HomeFragment : Fragment() {
             }
 
             override fun onResponse(call: Call<List<Person>>, response: Response<List<Person>>) {
+                Log.println(Log.ERROR,"kek", "LOOOOOOOL")
+                Log.println(Log.ERROR,"kek", "LOOOOOOOL")
+                Log.println(Log.ERROR,"kek", "LOOOOOOOL")
+                Log.println(Log.ERROR,"kek", response.toString())
                 _response.value = response.body()
                     ?.groupBy { it.priority }
                     ?.flatMap { (category, videos) -> listOf<ContactItem>(ContactItem.PriorityName(category)) + videos.map { ContactItem.PersonItem(it) } }
                 contacts_list?.apply {
                     layoutManager = LinearLayoutManager(activity)
-                    adapter = HomeRecyclerViewAdapter(_response.value!!)
+                    if (_response.value != null){
+                        adapter = HomeRecyclerViewAdapter(_response.value!!)
+                    }
+
                 }
             }
         })
