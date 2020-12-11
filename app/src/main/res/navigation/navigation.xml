@@ -7,6 +7,17 @@
 
 
 
-
+    <fragment
+        android:id="@+id/menu_item_home"
+        android:name="com.example.mad_kit.homeSection.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_learnSectionFragment"
+            app:destination="@id/menu_item_learn" />
+        <action
+            android:id="@+id/action_menu_item_home_to_menu_item_add_person"
+            app:destination="@id/menu_item_add_person" />
+    </fragment>
 
 </navigation>
