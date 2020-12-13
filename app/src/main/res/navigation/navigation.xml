@@ -20,4 +20,17 @@
             app:destination="@id/menu_item_add_person" />
     </fragment>
 
+    <fragment
+        android:id="@+id/menu_item_add_person"
+        android:name="com.example.mad_kit.addPersonSection.AddPersonFragment"
+        android:label="fragment_add_person"
+        tools:layout="@layout/fragment_add_person" >
+<!--        <action-->
+<!--            android:id="@+id/action_addPersonFragment_to_settingsFragment"-->
+<!--            app:destination="@id/menu_item_settings" />-->
+        <action
+            android:id="@+id/action_menu_item_add_person_to_menu_item_home"
+            app:destination="@id/menu_item_home" />
+    </fragment>
+
 </navigation>
