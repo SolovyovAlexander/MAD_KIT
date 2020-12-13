@@ -3,4 +3,15 @@
     <string name="home_button">HOME</string>
     <string name="add_person_button">ADD</string>
     <string name="learn_button">LEARN</string>
+    <string name="name">Enter name</string>
+    <string name="add_person_name_placeholder">Name</string>
+    <string name="priority">Set Priority</string>
+    <string name="top_priority">TOP</string>
+    <string name="family_priority">FAMILY</string>
+    <string name="friends_priority">FRIENDS</string>
+    <string name="other_priority">OTHERS</string>
+    <string name="reminder">How often to get in touch</string>
+    <string name="messengers">Add phone number</string>
+    <string name="add_person_contact_placeholder">Enter phone number</string>
+    <string name="save">SAVE</string>
 </resources>
