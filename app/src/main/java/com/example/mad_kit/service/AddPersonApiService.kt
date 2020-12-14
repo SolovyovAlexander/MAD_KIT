@@ -23,10 +23,10 @@ interface AddPersonApiService {
     @POST("api/kit/kit-people/")
     fun addPerson(@Header("Authorization") token: String, @Body person: Person): Call<Person>
 
-    @PUT("api/kit/kit-people/{personId}")
+    @PUT("api/kit/kit-people/{personId}/")
     fun putPerson(@Header("Authorization") token: String, @Path("personId") personId: Int, @Body person: Person): Call<Person>
 
-    @GET("api/kit/kit-people/{personId}")
+    @GET("api/kit/kit-people/{personId}/")
     fun getPerson(@Header("Authorization") token: String, @Path("personId") personId: Int): Call<Person>
 }
 
