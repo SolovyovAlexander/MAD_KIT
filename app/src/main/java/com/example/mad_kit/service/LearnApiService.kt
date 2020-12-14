@@ -8,7 +8,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
-private const val BASE_URL = "https://keep-in-touch.tk/ "
+private const val BASE_URL = "http://10.90.137.154:8000/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
@@ -20,7 +20,7 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface LearnApiService {
-    @GET("api/kit/lessons")
+    @GET("api/kit/lessons/")
     fun getLessons(): Call<List<Video>>
 }
 
